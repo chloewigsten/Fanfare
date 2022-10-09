@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="index-gallery">
+  {% for photo in photos %}
+    <a href="#">
+      <div class="index-card">
+          <img src="{{photo.photo}}" alt="{{photo.title}}" />
+            <div class="index-card-header">
+              <h2 class="index-card-title">{{photo.title}}</h2>
+            </div>
+      </div>
+    </a>
+    {% empty %}
+      <article class="index-message">
+        <div class="index-message-header">
+          <p>No Celebs Available</p>
+        </div>
+      </article>
+    {% endfor %}
+</div>
+
+{% endblock %}
