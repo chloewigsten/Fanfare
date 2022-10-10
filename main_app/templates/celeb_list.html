@@ -5,21 +5,21 @@
 {% block content %}
 
 <!-- Beginning of button -->
-
-<form class="mb-5" method="get">
+<div class="top-of-index">
+  <form class="mb-5" method="get">
     <div class="field has-addons">
       <div class="control">
         <input class="input" type="text" name="name" placeholder="Name" />
       </div>
       <div class="control">
-        <input class="button is-success" type="submit" value="Search" />
+        <input class="button is-success" type="submit" value="Search"/>
       </div>
       <a class="button" href="{% url 'celebs' %}">Clear Search </a>
       <h1 class="index-title">{{header}}</h1>
     </div>
   </form>
+</div>
 
-  <a class="button" href="{% url 'create_celeb' %}">Add Celeb</a>
 
 <!-- Beginning of index card -->
 
@@ -29,9 +29,7 @@
   <a href="{% url 'celeb_show' celeb.pk %}">
     <div class="index-card">
           <img src="{{celeb.image}}" alt="{{celeb.name}}" />
-      <div class="index-card-header">
-        <h2 class="index-card-title" font-size='89px'>{{celeb.name}}</h2>
-      </div>
+        <h2 class="index-card-title">{{celeb.name}}</h2>
     </div>
   </a>
 	{% empty %}

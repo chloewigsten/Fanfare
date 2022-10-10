@@ -1,1 +1,0 @@
-web: gunicorn fanfare_project.wsgi

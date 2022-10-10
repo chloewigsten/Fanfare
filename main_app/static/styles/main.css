@@ -13,6 +13,79 @@ h1, h2, h3 {
     color: #9C6644;
 }
 
+/* Nav Styling */
+
+.navbar {
+    width: 85%;
+    margin: 0 auto;
+    background: #9C6644;
+    padding: 50px 0;
+    box-shadow: 0px 5px 0px #dedede;
+    font-size: 25px;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #EDE0D4;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  }
+
+.navbar a{
+    color: #EDE0D4;
+}
+
+
+.navbar ul li a {
+    position:relative;
+    z-index: 1;
+  }
+.navbar ul li a:hover {
+    color: #7F5539;
+  }
+.navbar ul li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #DDB892;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+
+.navbar ul li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  
+
+
 /* Index Styling */
 
 .index-gallery {
@@ -27,16 +100,45 @@ h1, h2, h3 {
 
 .index-gallery .index-card img {
     height: 300px;
-    width: 300px;
     border: 5px solid white;
     margin-top: 25px;
+    display: flex; 
+    justify-content: center;
 }
 
-.index-gallery .index-card .index-card-header .index-card-title {
-    font-size: 30px;
+.index-gallery .index-card .index-card-title {
+    font-size: 25px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
+/* Search Bar Styling */
+
+.mb-5 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.top-of-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: cover;
+    height: 100px;
+    background-color:#e5be97;
+}
+
+.mb-5 .button{
+    background-color: #7F5539;
+    color: white;
+    border-radius: 4px;
+}
+
+.mb-5 .control {
+    justify-content: center;
+    width: 350px; 
+}
 
 /* Celeb Show Page Styling */
 

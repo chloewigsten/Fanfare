@@ -13,24 +13,18 @@
         <title>Fanfare - {% block title %}{% endblock %}</title> 
     </head>
     <body >
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand" height="100px">
-                <a class="navbar-item" href="/">
-                    <img class='logo' src="https://i.imgur.com/6qlv4dj.png"/>
-                </a>
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <div class="navbar-menu">
-                <a class="navbar-item" href="/about">About</a>
-            </div>
-            <div class="navbar-menu">
-                <a class="navbar-item" href="/celebs">Celebs</a>
-            </div>
-        </nav>
+        <div class="navbar-styling"></div>
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li><a class="navbar-item" href="/about">About</a></li>
+                    <li><a class="navbar-item" href="/celebs">Celebs</a></li>
+                    <li><a class="navbar-item" href="{% url 'create_celeb' %}">Add Celeb</a></li>
+                    <li><a class='navbar-item navbar-end' href="/">
+                        <img class='logo' src="https://i.imgur.com/6qlv4dj.png">
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="container">
 
             {% block content %}{% endblock %}
