@@ -13,18 +13,6 @@ h1, h2, h3 {
     color: #9C6644;
 }
 
-/* Nav Styling */
-
-.navbar {
-    background-color: #9C6644;
-    color: #EDE0D4;
-    height: 100px;
-}
-
-.navbar .navbar-brand {
-    height: 100px;
-}
-
 /* Index Styling */
 
 .index-gallery {
@@ -39,9 +27,16 @@ h1, h2, h3 {
 
 .index-gallery .index-card img {
     height: 300px;
-    width: auto;
+    width: 300px;
     border: 5px solid white;
+    margin-top: 25px;
 }
+
+.index-gallery .index-card .index-card-header .index-card-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 
 /* Celeb Show Page Styling */
 

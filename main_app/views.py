@@ -51,35 +51,6 @@ class PhotoIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['photos'] = Photo.objects.all()
+        celeb_id = self.request.GET.get('photos')
+        context['photos'] = Photo.objects.filter(celeb__exact=celeb_id)
         return context
-
-class PhotoShow(DetailView):
-    model = Photo
-    template_name="photo_show.html"
-
-
-class BlindItemIndex(TemplateView):
-    model: BlindItem
-    template_name='blind_items_index.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        celebs_id = self.request.GET.get('blinds')
-        if celebs_id != None: 
-            context['blinds'] = BlindItem.objects.filter(celebs_id__exact=celebs_id)
-        else:
-            context['blinds'] = BlindItem.objects.all()
-        return context
-
-class ArticleIndex(TemplateView):
-    model: Article
-    template_name='article_index.html'
-
-class Video(TemplateView):
-    model: Video
-    template_name='video_index.html'
-
-class MessageBoard(TemplateView):
-    model: MessageBoard
-    template_name='message_board_index.html'

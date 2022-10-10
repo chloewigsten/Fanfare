@@ -20,7 +20,7 @@ class Photo(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     date_taken = models.DateField(default=date.today)
-    celebs = models.ManyToManyField(Celeb)
+    celeb = models.ManyToManyField(Celeb)
 
     def __str__(self):
         return self.photo
