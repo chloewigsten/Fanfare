@@ -3,21 +3,25 @@
 {% block content%}
 
 <div class="index-gallery">
-  {% for photo in photos %}
-    <a href="#">
-      <div class="index-card">
-          <img src="{{photo.photo}}" alt="{{photo.title}}" />
-            <div class="index-card-header">
-              <h2 class="index-card-title">{{photo.title}}</h2>
+  {% for celeb_id in photo.celebs.all %}
+    <div class="choose-celeb"></div>
+      {% for photo_id in photo %}
+        <a href="#">
+          <div class="index-card">
+              <img src="{{photo_id.photo}}" alt="{{photo_id.title}}" />
+                <div class="index-card-header">
+                  <h2 class="index-card-title">{{photo_id.title}}</h2>
+                </div>
+          </div>
+        </a>
+        {% empty %}
+          <article class="index-message">
+            <div class="index-message-header">
+              <p>No Celebs Available</p>
             </div>
-      </div>
-    </a>
-    {% empty %}
-      <article class="index-message">
-        <div class="index-message-header">
-          <p>No Celebs Available</p>
-        </div>
-      </article>
+          </article>
+          {% endfor %}
+    </div>
     {% endfor %}
 </div>
 

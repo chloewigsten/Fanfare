@@ -3,12 +3,12 @@
 {% block content%}
 
 <div class="index-gallery">
-  {% for blind in blinds %}
+  {% for article in articles %}
     <a href="#">
       <div class="index-card">
+          <img src="{{photo.photo}}" alt="{{photo.title}}" />
             <div class="index-card-header">
-              <h2 class="index-card-title">{{blind.title}}</h2>
-              <h2 class="index-card-title">{{blind.body}}</h2>
+              <h2 class="index-card-title">{{photo.title}}</h2>
             </div>
       </div>
     </a>

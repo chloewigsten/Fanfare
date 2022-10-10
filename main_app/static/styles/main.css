@@ -18,11 +18,11 @@ h1, h2, h3 {
 .navbar {
     background-color: #9C6644;
     color: #EDE0D4;
+    height: 100px;
 }
 
-.navbar-item {
-    color: #EDE0D4;
-    font-weight: bold;
+.navbar .navbar-brand {
+    height: 100px;
 }
 
 /* Index Styling */

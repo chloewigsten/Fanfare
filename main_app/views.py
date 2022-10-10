@@ -1,9 +1,10 @@
+from re import L
 from django.shortcuts import render
 from django.views import View 
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
-from .models import Celeb, Photo, BlindItem
+from .models import Celeb, Photo, BlindItem, Article, Video, MessageBoard
 
 # Home View
 class Home(TemplateView):
@@ -50,11 +51,7 @@ class PhotoIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        celebs_id = self.request.GET.get('photos')
-        if celebs_id != None: 
-            context['photos'] = Photo.objects.filter(celebs_id__exact=celebs_id)
-        else:
-            context['photos'] = Photo.objects.all()
+        context['photos'] = Photo.objects.all()
         return context
 
 class PhotoShow(DetailView):
@@ -64,10 +61,25 @@ class PhotoShow(DetailView):
 
 class BlindItemIndex(TemplateView):
     model: BlindItem
-    template_name='blind_items_index'
+    template_name='blind_items_index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        celebs_id = self.request.GET.get('blind-items')
-        context['blind-items'] = BlindItem.objects.filter(celebs_id=celebs_id)
+        celebs_id = self.request.GET.get('blinds')
+        if celebs_id != None: 
+            context['blinds'] = BlindItem.objects.filter(celebs_id__exact=celebs_id)
+        else:
+            context['blinds'] = BlindItem.objects.all()
         return context
+
+class ArticleIndex(TemplateView):
+    model: Article
+    template_name='article_index.html'
+
+class Video(TemplateView):
+    model: Video
+    template_name='video_index.html'
+
+class MessageBoard(TemplateView):
+    model: MessageBoard
+    template_name='message_board_index.html'
