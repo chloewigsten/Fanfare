@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
-{% block content %}
-<h1>Photo Show</h1>
+
+{% block content%}
+
+<div class="photo-show">
+          <div class="photo-show-card">
+              <img src="{{photo.photo}}" alt="{{photo.title}}" />
+              <h1>{{photo.title}}</h1>
+          </div>
+</div>
+
 {% endblock %}

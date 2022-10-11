@@ -2,17 +2,17 @@
 
 {% block content%}
 
-<div class="photo-index-gallery">
-  {% for photo in photos %}
-        <a href="{% url 'photo_show' photo.pk %}">
-          <div class="photo-index-card">
-              <img src="{{photo.photo}}" alt="{{photo.title}}" />
+<div class="articles-index-gallery">
+  {% for article in articles %}
+        <a href="{% url 'article_show' article.pk %}">
+          <div class="articles-index-card">
+              <h1>{{article.title}}</h1>
           </div>
         </a>
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">
-              <p>No Photos Available</p>
+              <p>No Articles Available</p>
             </div>
           </article>
     {% endfor %}

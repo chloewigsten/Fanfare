@@ -2,17 +2,17 @@
 
 {% block content%}
 
-<div class="photo-index-gallery">
-  {% for photo in photos %}
-        <a href="{% url 'photo_show' photo.pk %}">
-          <div class="photo-index-card">
-              <img src="{{photo.photo}}" alt="{{photo.title}}" />
+<div class="video-index-gallery">
+  {% for video in videos %}
+        <a href="{% url 'video_show' video.pk %}">
+          <div class="video-index-card">
+              <img src="{{video.thumbnail}}" alt="{{video.title}}" />
           </div>
         </a>
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">
-              <p>No Photos Available</p>
+              <p>No Videos Available</p>
             </div>
           </article>
     {% endfor %}
