@@ -7,6 +7,23 @@
               <img src="{{photo.photo}}" alt="{{photo.title}}" />
               <h1>{{photo.title}}</h1>
           </div>
+
+          <div class="comment-section">
+            {% for comment in photo.comments.all %}
+            <div class="comment">
+                <h4>{{comment.username}}</h4>
+                <p>{{comment.body}}</p>
+                <p>{{comment.date_posted}}</p>
+            </div>
+            {% empty %}
+            <article class="message">
+                <div class="message-header">
+                    <p>No Comments Available</p>
+                </div>
+            </article>
+
+            {% endfor %}
+          </div>
 </div>
 
 {% endblock %}

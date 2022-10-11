@@ -3,11 +3,19 @@
 {% block content%}
 
 <div class="blind-show">
-    {% for blind in blinds %}
           <div class="blind-show-card">
-              <h1>{{blind.title}}</h1>
-              <p>{{blind.body}}</p>
+              <h1>{{blinds.title}}</h1>
+              <p>{{blinds.body}}</p>
           </div>
+
+          <div class="comment-section">
+            {% for comment in blind.comments.all %}
+            <div class="comment">
+                <h4>{{comment.username}}</h4>
+                <p>{{comment.body}}</p>
+                <p>{{comment.date_posted}}</p>
+            </div>
+
     {% endfor %}
 </div>
 

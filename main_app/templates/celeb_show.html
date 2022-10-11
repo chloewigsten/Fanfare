@@ -4,23 +4,22 @@
 
 <div class="celeb-show">
 
-    <div class = 'grid-container'>
+    <div class = 'grid-container' style="background-image: url '% {{celeb.coverphoto}} %'">
 
         <div class="grid-item">
+            <div class="grid-item-one">
+                <div class="celeb-photo">
+                    <img class='celeb-photo-img' src="{{celeb.image}}" alt="{{celeb.name}}" />
 
-            <div class="celeb-photo">
-
-                 <img class='celeb-photo' src="{{celeb.image}}" alt="{{celeb.name}}" width='250px'/>
-
-            </div>
-            
-            <div class="celeb-bio">
-                <h1 class="show-page-title">{{celeb.name}}</h1>
-                <p>{{celeb.bio}}</p>
-            </div>
-
-            <div class="update-celeb">
-                <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+                </div>
+                
+                <div class="celeb-bio">
+                    <h1 class="show-page-title">{{celeb.name}}</h1>
+                    <p>{{celeb.bio}}</p>
+                    <div class="update-celeb">
+                        <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+                    </div>
+                </div>
             </div>
 
         </div>
