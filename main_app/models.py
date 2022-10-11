@@ -47,6 +47,7 @@ class Article(models.Model):
 
 class Video(models.Model):
     video = models.CharField(max_length=900)
+    thumbnail= models.CharField(max_length=900, default='')
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     date_taken = models.DateField(default=date.today)

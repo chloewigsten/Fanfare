@@ -51,6 +51,57 @@ class PhotoIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        celeb_id = self.request.GET.get('photos')
-        context['photos'] = Photo.objects.filter(celeb__exact=celeb_id)
+        context['photos'] = Photo.objects.filter(celeb=self.kwargs['pk'])
         return context
+
+class BlindItemIndex(TemplateView):
+    model: BlindItem
+    template_name= 'blind_items_index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['blinds'] = BlindItem.objects.filter(celebs=self.kwargs['pk'])
+        return context
+
+class VideoIndex(TemplateView):
+    model: Video
+    template_name = 'video_index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['videos'] = Video.objects.filter(celebs=self.kwargs['pk'])
+        return context
+
+class ArticleIndex(TemplateView):
+    model: Article
+    template_name = 'article_index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['articles'] = Article.objects.filter(celebs=self.kwargs['pk'])
+        return context
+
+class MessageBoardIndex(TemplateView):
+    model: MessageBoard
+    template_name = 'message_board_index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['message-boards'] = MessageBoard.objects.filter(celebs=self.kwargs['pk'])
+        return context
+
+class PhotoShow(DetailView):
+    model = Photo
+    template_name="photo_show.html"
+
+
+    def get_context_data(self, **kwargs):
+        context = super(PhotoShow, self).get_context_data(**kwargs)
+        context ['photo']= Photo.objects.filter(photo_id=self.kwargs['photo_id'])
+        return context
+        
+    # def get_context_data(self, **kwargs):
+    #     context = super(PhotoShow, self).get_context_data(**kwargs)
+    #     photo_id = Photo.objects.get(id=self.kwargs.get('photo_pk'))
+    #     context['photo'] = photo_id
+    #     return context

@@ -3,12 +3,13 @@
 {% block content%}
 
 <div class="index-gallery">
-  {% for blind in blinds %}
+  {% for video in videos %}
 
           <div class="index-card">
+
+              <img src="{{video.thumbnail}}" alt="{{video.title}}" />
                 <div class="index-card-header">
-                  <h2 class="index-card-title">{{blind.title}}</h2>
-                  <p class="index-card-body">{{blind.body}}</p>
+                  <h2 class="index-card-title">{{video.title}}</h2>
                 </div>
 
           </div>
@@ -16,7 +17,7 @@
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">
-              <p>No Blind Items Available</p>
+              <p>No Videos Available</p>
             </div>
           </article>
     {% endfor %}

@@ -4,20 +4,22 @@
 
 <div class="index-gallery">
   {% for article in articles %}
-    <a href="#">
-      <div class="index-card">
-          <img src="{{photo.photo}}" alt="{{photo.title}}" />
-            <div class="index-card-header">
-              <h2 class="index-card-title">{{photo.title}}</h2>
+
+          <div class="index-card">
+
+              <img src="{{article.cover_photo}}" alt="{{article.title}}" />
+                <div class="index-card-header">
+                  <h2 class="index-card-title">{{article.title}}</h2>
+                </div>
+
+          </div>
+        </a>
+        {% empty %}
+          <article class="index-message">
+            <div class="index-message-header">
+              <p>No Articles Available</p>
             </div>
-      </div>
-    </a>
-    {% empty %}
-      <article class="index-message">
-        <div class="index-message-header">
-          <p>No Celebs Available</p>
-        </div>
-      </article>
+          </article>
     {% endfor %}
 </div>
 

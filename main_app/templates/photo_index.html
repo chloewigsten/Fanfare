@@ -2,25 +2,17 @@
 
 {% block content%}
 
-<div class="index-gallery">
+<div class="photo-index-gallery">
   {% for photo in photos %}
-
-          <div class="index-card">
-
-            {% for celeb in photo.celeb.all %}
-
-              <img src="{{celeb.photo}}" alt="{celeb.title}}" />
-                <div class="index-card-header">
-                  <h2 class="index-card-title">{{celeb.title}}</h2>
-                </div>
-
-            {% endfor %}
+        <a href="{% url 'photo_show' photo_id %}">
+          <div class="photo-index-card">
+              <img src="{{photo.photo}}" alt="{{photo.title}}" />
           </div>
         </a>
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">
-              <p>No Celebs Available</p>
+              <p>No Photos Available</p>
             </div>
           </article>
     {% endfor %}

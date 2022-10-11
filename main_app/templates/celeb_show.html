@@ -1,22 +1,48 @@
 {% extends 'base.html' %} 
+
 {% block content %}
+
 <div class="celeb-show">
-    <div class="celeb-photo">
-        <img class='celeb-photo' src="{{celeb.image}}" alt="{{celeb.name}}" width='250px'/>
-    </div>
-        <h1 class="show-page-title">{{celeb.name}}</h1>
-    <div class="'celeb-bio">
-        <div class="celeb-bio-section">
-            <h4 class="celeb-bio">Bio:</h4>
-            <p>{{celeb.bio}}</p>
-        </div>
-        <div class="update-celeb">
-            <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
-        </div>
-        <div class = 'options-grid'>
-            <div class="photos-grid">
-                <a href="{% url 'photo_index' celeb.pk %}">Photos</a>
+
+    <div class = 'grid-container'>
+
+        <div class="grid-item">
+
+            <div class="celeb-photo">
+
+                 <img class='celeb-photo' src="{{celeb.image}}" alt="{{celeb.name}}" width='250px'/>
+
             </div>
+            
+            <div class="celeb-bio">
+                <h1 class="show-page-title">{{celeb.name}}</h1>
+                <p>{{celeb.bio}}</p>
+            </div>
+
+            <div class="update-celeb">
+                <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+            </div>
+
+        </div>
+
+        <div class="grid-item">
+            <a href="{% url 'photo_index' celeb.pk %}">Photos</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="{% url 'video_index' celeb.pk %}">Videos</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="{% url 'article_index' celeb.pk %}">Articles</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="{% url 'blind_items_index' celeb.pk %}">Blind Items</a>
+        </div>
+
+        <div class="grid-item">
+            <a href="{% url 'message_board_index' celeb.pk %}">Message Board</a>
         </div>
 
     </div>

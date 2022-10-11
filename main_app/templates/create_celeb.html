@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}Celebs{% endblock  %}
+{% block title %}Create Celeb{% endblock  %}
 
 {% block content%}
-<h1>Add A New Celeb</h1>
+<h1 class='create-celeb-title'>Add A New Celeb</h1>
 
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Create Celeb" />
-</form>
+<div class="create-celeb">
+    <form class='create-celeb-form' method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Create Celeb" />
+    </form>
+</div>
 {% endblock %}
