@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<div class="blind-show">
+    {% for blind in blinds %}
+          <div class="blind-show-card">
+              <h1>{{blind.title}}</h1>
+              <p>{{blind.body}}</p>
+          </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

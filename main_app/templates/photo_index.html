@@ -4,7 +4,7 @@
 
 <div class="photo-index-gallery">
   {% for photo in photos %}
-        <a href="{% url 'photo_show' photo_id %}">
+        <a href="{% url 'photo_show' photo.pk %}">
           <div class="photo-index-card">
               <img src="{{photo.photo}}" alt="{{photo.title}}" />
           </div>

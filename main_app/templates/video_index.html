@@ -2,16 +2,11 @@
 
 {% block content%}
 
-<div class="index-gallery">
+<div class="video-index-gallery">
   {% for video in videos %}
-
-          <div class="index-card">
-
+        <a href="{% url 'video_show' video.pk %}">
+          <div class="video-index-card">
               <img src="{{video.thumbnail}}" alt="{{video.title}}" />
-                <div class="index-card-header">
-                  <h2 class="index-card-title">{{video.title}}</h2>
-                </div>
-
           </div>
         </a>
         {% empty %}

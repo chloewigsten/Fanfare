@@ -2,22 +2,19 @@
 
 {% block content%}
 
-<div class="index-gallery">
-  {% for blind in blinds %}
-    <a href="#">
-      <div class="index-card">
-            <div class="index-card-header">
-              <h2 class="index-card-title">{{blind.title}}</h2>
-              <h2 class="index-card-title">{{blind.body}}</h2>
+<div class="mb-index-gallery">
+  {% for messageboard in messageboards %}
+        <a href="{% url 'message_board_show' messageboard.pk %}">
+          <div class="mb-index-card">
+              <h1>{{messageboard.title}}</h1>
+          </div>
+        </a>
+        {% empty %}
+          <article class="index-message">
+            <div class="index-message-header">
+              <p>No Message Board Available</p>
             </div>
-      </div>
-    </a>
-    {% empty %}
-      <article class="index-message">
-        <div class="index-message-header">
-          <p>No Celebs Available</p>
-        </div>
-      </article>
+          </article>
     {% endfor %}
 </div>
 
