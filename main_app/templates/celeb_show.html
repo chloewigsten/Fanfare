@@ -7,41 +7,40 @@
     <div class = 'grid-container'>
 
         <div class="grid-item">
+            <div class="grid-item-one" style="background-image: url('{{celeb.coverphoto}}')" background-size="cover">
+                <div class="celeb-photo">
+                    <img class='celeb-photo-img' src="{{celeb.image}}" alt="{{celeb.name}}" />
 
-            <div class="celeb-photo">
-
-                 <img class='celeb-photo' src="{{celeb.image}}" alt="{{celeb.name}}" width='250px'/>
-
-            </div>
-            
-            <div class="celeb-bio">
-                <h1 class="show-page-title">{{celeb.name}}</h1>
-                <p>{{celeb.bio}}</p>
-            </div>
-
-            <div class="update-celeb">
-                <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+                </div>
+                
+                <div class="celeb-bio">
+                    <h1 class="show-page-title">{{celeb.name}}</h1>
+                    <p>{{celeb.bio}}</p>
+                    <div class="update-celeb">
+                        <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item-two" style="background-image: url('{{celeb.photosphoto}}')" background-size="cover">
             <a href="{% url 'photo_index' celeb.pk %}">Photos</a>
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item-three" style="background-image: url('{{celeb.videosphoto}}')" background-size="cover">
             <a href="{% url 'video_index' celeb.pk %}">Videos</a>
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item-four" style="background-image: url('{{celeb.articlesphoto}}')" background-size="cover">
             <a href="{% url 'article_index' celeb.pk %}">Articles</a>
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item-five" style="background-image: url('{{celeb.blinditemsphoto}}')" background-size="cover">
             <a href="{% url 'blind_item_index' celeb.pk %}">Blind Items</a>
         </div>
 
-        <div class="grid-item">
+        <div class="grid-item-sixth" style="background-image: url('{{celeb.messageboardsphoto}}')" background-size="cover">
             <a href="{% url 'message_board_index' celeb.pk %}">Message Board</a>
         </div>
 

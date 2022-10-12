@@ -7,6 +7,12 @@ class Celeb(models.Model):
     image = models.CharField(max_length=500)
     bio = models.CharField(max_length=500)
     created_at= models.DateTimeField(auto_now_add=True)
+    coverphoto = models.CharField(max_length=1000, default='')
+    photosphoto = models.CharField(max_length=1000, default='')
+    videosphoto = models.CharField(max_length=1000, default='')
+    articlesphoto = models.CharField(max_length=1000, default='')
+    blinditemsphoto = models.CharField(max_length=1000, default='')
+    messageboardsphoto = models.CharField(max_length=1000, default='')
 
     def __str__(self):
         return self.name
@@ -23,7 +29,7 @@ class Photo(models.Model):
     celeb = models.ManyToManyField(Celeb)
 
     def __str__(self):
-        return self.photo
+        return self.title
 
 class BlindItem(models.Model):
     title = models.CharField(max_length=150)
@@ -54,7 +60,7 @@ class Video(models.Model):
     celeb = models.ManyToManyField(Celeb)
 
     def __str__(self):
-        return self.video
+        return self.title
 
 class MessageBoard(models.Model):
     title = models.CharField(max_length=300)
@@ -62,6 +68,53 @@ class MessageBoard(models.Model):
     date_posted = models.DateField(default=date.today)
     celeb = models.ManyToManyField(Celeb)
 
-    def _str_(self):
+    def __str__(self):
         return self.title
     
+# Comment Models 
+
+class PhotoComments(models.Model):
+    username = models.CharField(max_length=100, default='')
+    body = models.CharField(max_length=1000)
+    date_posted = models.DateField(default=date.today)
+    photo = models.ForeignKey(Photo, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return self.body
+
+class VideoComment(models.Model):
+    username = models.CharField(max_length=100, default='')
+    body = models.CharField(max_length=1000)
+    date_posted = models.DateField(default=date.today)
+    video = models.ForeignKey(Video, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return self.body
+
+
+class BlindItemComment(models.Model):
+    username = models.CharField(max_length=100, default='')
+    body = models.CharField(max_length=1000)
+    date_posted = models.DateField(default=date.today)
+    blind = models.ForeignKey(BlindItem, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return self.body
+
+class ArticleComment(models.Model):
+    username = models.CharField(max_length=100, default='')
+    body = models.CharField(max_length=1000)
+    date_posted = models.DateField(default=date.today)
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return self.body
+
+class MessageBoardComment(models.Model):
+    username = models.CharField(max_length=100, default='')
+    body = models.CharField(max_length=1000)
+    date_posted = models.DateField(default=date.today)
+    messageboard = models.ForeignKey(MessageBoard, on_delete=models.CASCADE, related_name='comments')
+
+    def __str__(self):
+        return self.body

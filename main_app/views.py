@@ -1,6 +1,6 @@
 from email.message import Message
 from re import L
-from django.shortcuts import render
+from django.shortcuts import render 
 from django.views import View 
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
@@ -10,10 +10,6 @@ from .models import Celeb, Photo, BlindItem, Article, Video, MessageBoard
 # Home View
 class Home(TemplateView):
     template_name = ('home.html')
-
-# About View 
-class About(TemplateView):
-    template_name = ('about.html')
 
 
 # Celeb Model
@@ -96,7 +92,7 @@ class BlindItemsIndex(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['blinds'] = BlindItem.objects.filter(celeb=self.kwargs['pk'])
+        context['blinditems'] = BlindItem.objects.filter(celeb=self.kwargs['pk'])
         return context
 
 class BlindItemShow(DetailView):
