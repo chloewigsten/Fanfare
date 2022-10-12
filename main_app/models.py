@@ -8,6 +8,11 @@ class Celeb(models.Model):
     bio = models.CharField(max_length=500)
     created_at= models.DateTimeField(auto_now_add=True)
     coverphoto = models.CharField(max_length=1000, default='')
+    photosphoto = models.CharField(max_length=1000, default='')
+    videosphoto = models.CharField(max_length=1000, default='')
+    articlesphoto = models.CharField(max_length=1000, default='')
+    blinditemsphoto = models.CharField(max_length=1000, default='')
+    messageboardsphoto = models.CharField(max_length=1000, default='')
 
     def __str__(self):
         return self.name
@@ -63,7 +68,7 @@ class MessageBoard(models.Model):
     date_posted = models.DateField(default=date.today)
     celeb = models.ManyToManyField(Celeb)
 
-    def _str_(self):
+    def __str__(self):
         return self.title
     
 # Comment Models 

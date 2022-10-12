@@ -28,8 +28,8 @@
 
   <a href="{% url 'celeb_show' celeb.pk %}">
     <div class="index-card">
-          <img src="{{celeb.image}}" alt="{{celeb.name}}" />
-        <h2 class="index-card-title">{{celeb.name}}</h2>
+          <img class='celeb-image' src="{{celeb.image}}" alt="{{celeb.name}}" />
+          <p class="hoverable">{{celeb.name}}</p>
     </div>
   </a>
 	{% empty %}

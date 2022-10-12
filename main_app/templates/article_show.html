@@ -2,9 +2,17 @@
 
 {% block content%}
 
-<div class="article-show">
+<div class="article-show" background-image="url'{{article.cover_photo}}'">
           <div class="article-show-card">
-              <h1>{{article.title}}</h1>
+            <img src="{{article.cover_photo}}" alt="{{article.title}}" />
+            <div class="article-body">
+                <p class="article-date">{{article.date_posted}}</p>    
+                <h1 class="article-title">{{article.title}}</h1>
+                <p class="article-summary">{{article.summary}}</p>
+                <a href="{{article.url}}">
+                    <button type='submit' class="read-more-button">Read more</button>
+                </a>
+            </div>
           </div>
 
           <div class="comment-section">

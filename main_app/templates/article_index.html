@@ -4,11 +4,21 @@
 
 <div class="articles-index-gallery">
   {% for article in articles %}
-        <a href="{% url 'article_show' article.pk %}">
           <div class="articles-index-card">
-              <h1>{{article.title}}</h1>
+            <div class="articles-photo">
+              <img src="{{article.cover_photo}}" alt="{{article.title}}" />
+            </div>
+            <div class="article-information">
+              <p class="date-posted" text-tranform="uppercase"><em>{{article.date_posted}}</em></p>
+              <h1 class="article-headline"><b>{{article.title}}</b></h1>
+              <p class="article-paragraph">{{article.summary}}</p>
+              <a href="{% url 'article_show' article.pk %}">
+                <button class="read-more">Read More</button>
+              </a>
+            </div>
           </div>
         </a>
+        <hr>
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">

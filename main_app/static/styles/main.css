@@ -16,7 +16,7 @@ h1, h2, h3 {
 /* Nav Styling */
 
 .navbar {
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     background: #9C6644;
     padding: 50px 0;
@@ -36,7 +36,6 @@ h1, h2, h3 {
     padding: 15px;
     text-decoration: none;
     color: #EDE0D4;
-    font-weight: 800;
     text-transform: uppercase;
     margin: 0 10px;
   }
@@ -91,20 +90,51 @@ h1, h2, h3 {
 
 .index-gallery {
     display: grid;
-    grid-template-rows: 150px 150px 150px;
-    grid-template-columns: 450px 450px 450px;
-    row-gap: 10px;
-    column-gap: 10px;
-    justify-content: space-evenly;
-    width: 100%;
+    grid-template-columns: 325px 325px 325px 325px;
+    grid-template-rows: 300px 300px 300px 300px;
+    gap: 10px;
+    margin-top: 2%;
 }
 
-.index-gallery .index-card img {
+.index-gallery .index-card {
+    border: 3px solid rgb(205, 155, 97);
+    border-radius: 5px;
+    background-color: rgb(106, 48, 16);
+    overflow: hidden;
     height: 300px;
-    border: 5px solid white;
-    margin-top: 25px;
-    display: flex; 
+    object-fit: fill;
+}
+
+.index-gallery .index-card:hover {
+    border: 3px solid rgb(255, 248, 232);
+    border-radius: 5px;
+    overflow: hidden;
+    height: 300px;
+    object-fit: fill;
+}
+
+.index-gallery .index-card:hover .celeb-image {
+    opacity: 0.3;
+}
+
+.index-gallery .index-card .hoverable {
+    visibility: hidden;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.index-gallery .index-card:hover .hoverable {
+    visibility:visible;
+    margin-top: -10em;
+    margin-left: 4em;
+}
+
+.index-gallery .index-card img{
+    width: 325px;
 }
 
 .index-gallery .index-card .index-card-title {
@@ -120,13 +150,13 @@ h1, h2, h3 {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     border-radius: 5px;
 }
 .top-of-index {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: cover;
     height: 100px;
     background-color:#e5be97;
     border-radius: 5px;
@@ -165,14 +195,50 @@ h1, h2, h3 {
 
 .celeb-show .grid-container .grid-item {
     background-color: #B08968;
+    border:3px solid #462915;
     border-radius: 5px;
-    border: 3px solid #7F5539;
 }
 
 .celeb-show .grid-container .grid-item .grid-item-one {
     display: flex; 
     justify-content: center;
     align-items: center;
+    height: 344px;
+}
+
+.celeb-show .grid-container .grid-item .grid-item-two {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.celeb-show .grid-container .grid-item .grid-item-three {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 344px;
+}
+
+.celeb-show .grid-container .grid-item .grid-item-four {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 344px;
+}
+
+.celeb-show .grid-container .grid-item .grid-item-five {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 344px;
+}
+
+.celeb-show .grid-container .grid-item .grid-item-six {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 344px;
 }
 
 .celeb-show .grid-container .grid-item .header-photo {
@@ -180,7 +246,6 @@ h1, h2, h3 {
     background-image: url('https://i.imgur.com/2ZBIsl8.png');
     background-size: cover;
     background-position: center;
-    height: 350px;
 }
 
 .celeb-show .celeb-photo {
@@ -201,50 +266,206 @@ h1, h2, h3 {
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    margin: 3%;
-    margin-top: 5%;
+    width: 55%;
+    margin-top: 3%;
     color: rgb(68, 48, 17);
+    background-color:#e5be97;
+    border-radius: 5px;
+    padding: 20px;
+    margin-left: 3%;
+
 }
 
-
 .celeb-show .celeb-bio .show-page-title {
-    font-size: 30px;
+    font-size: 25px;
     color: #EDE0D4;
     font-weight: bolder;
     columns: 500px 2;
-} */
+} 
 
 /* Photo Index Page */
 
 .photo-index-gallery {
-    width: 100%;
     display: flex;
-    border: 5px solid black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color:rgb(106, 48, 16);
+    border: 1px solid rgb(143, 61, 17);
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 .photo-index-gallery .photo-index-card {
-    display: grid;
-    width: 100%;
-    column-gap: 25px;
-    grid-template-columns: repeat(3, 200px);
-    border: 5px solid hotpink;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 7%;
 }
 
 .photo-index-gallery .photo-index-card img{
-    max-width: 300px;
-    max-height: 300px;
+    max-height: 400px;
+    min-height: 350px;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
-/* Create Celeb Page */
+/* Articles Index */
 
-.create-celeb-title {
-    font-size: 30px;
-    font-weight: bold;
+.articles-index-gallery {
+    margin-top: 2%;
 }
 
-.create-celeb .create-celeb-form {
+.articles-index-gallery .articles-index-card {
+    display: grid;
+    grid-template-rows: 400px 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 2%;
+    background-color:#E6CCB2;
+    border-radius: 10px;
+}
+
+.articles-index-gallery .articles-index-card .articles-photo {
+    height: 270px;
+    width: 290px; 
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.articles-index-gallery .articles-index-card img{
+    max-height: 250px;
+    max-width: 300px; 
+}
+
+.articles-index-gallery .articles-index-card .article-information {
+    margin-left: 3%;
+    margin-right: 10%;
     display: flex; 
-    justify-content: center; 
-    color:#555;
+    flex-direction: column;
 }
+
+.articles-index-gallery .articles-index-card .article-information .date-posted {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.articles-index-gallery .articles-index-card .article-information button{
+    margin-top: 20px;
+    border: none;
+    background-color: white; 
+    color:rgb(117, 51, 16);
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px; 
+    height: 40px;
+    width: 140px;
+}
+
+.articles-index-gallery .articles-index-card .article-information .article-headline{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(117, 51, 16);
+}
+
+/* Article Show Page */
+
+.article-show {
+    width: 100%;
+    margin-top: 2%; 
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+}
+
+.article-show .article-show-card {
+    background-color:#E6CCB2;
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 80%;
+    justify-content: center;
+    border-radius: 5px;
+    border: 5px solid saddlebrown;
+}
+
+.article-show .article-show-card .article-body {
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 375px;
+}
+
+.article-show .article-show-card img{
+    height: 350px;
+}
+
+.article-show .article-show-card .article-body .article-date {
+   margin-bottom: 3%;
+   text-transform: uppercase;
+   font-weight: 200;
+}
+
+.article-show .article-show-card .article-body .article-title {
+    margin-bottom: 3%;
+    font-size: 30px;
+    font-weight: 700;
+    color:  saddlebrown;
+ }
+
+ .article-show .article-show-card .article-body .article-summary {
+    font-size: 15px;
+    color: rgb(69, 33, 6);
+ }
+
+.article-show .article-show-card .article-body .read-more-button{
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(69, 33, 6);
+    color: white;
+    border: none;
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 50%;
+    margin-bottom: 3%;
+    letter-spacing: 1px;
+ }
+
+
+ /* Message Board Index */
+
+.mb-index-gallery {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-template-rows: 300px 300px 300px;
+    gap: 10px;
+    margin-top: 2%;
+    border: 2px solid hotpink;
+    justify-content: center;
+ }
+
+.mb-index-gallery .mb-index-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    border: 2px solid hotpink;
+ }
+
+/* .mb-index-gallery .mb-index-card .mb-title {
+    color:#E6CCB2;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left:10%;
+    width: 150px;
+ } */
