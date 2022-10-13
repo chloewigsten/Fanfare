@@ -7,9 +7,11 @@
           <div class="mb-index-card">
               <h1 class="mb-title">{{messageboard.title}}</h1>
               <p class="mb-body">{{messageboard.body}}</p>
-              <a href="{% url 'message_board_show' messageboard.pk %}">
-                <button class="mb-button">Read More</button>
-              </a>
+              <div class="button-section">
+                <a href="{% url 'message_board_show' messageboard.pk %}">
+                  <button class="mb-button">Read More</button>
+                </a>
+              </div>
           </div>
         {% empty %}
           <article class="index-message">
