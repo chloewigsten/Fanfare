@@ -5,7 +5,11 @@
 <div class="photo-show">
           <div class="photo-show-card">
               <img src="{{photo.photo}}" alt="{{photo.title}}" />
-              <h1>{{photo.title}}</h1>
+              <div class="photo-body">
+                <h1 class="photo-title">{{photo.title}}</h1>
+                <p>{{photo.description}}</p>
+                <p class="date-posted">{{photo.date_taken}}</p>
+              </div>
           </div>
 
           <div class="comment-section">

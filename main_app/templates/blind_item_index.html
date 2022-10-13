@@ -3,12 +3,16 @@
 {% block content%}
 
 <div class="blinds-index-gallery">
-  {% for blinds in blinditems %}
-        <a href="{% url 'blind_item_show' blinds.pk %}">
+  {% for blinditem in blinditems %}
           <div class="blinds-index-card">
-              <h1>{{blinds.title}}</h1>
+              <h1 class="blinds-title">{{blinditem.title}}</h1>
+              <p>{{blinditem.body}}</p>
+              <div class="button-section">
+                <a href="{% url 'blind_item_show' blinditem.pk %}">
+                  <button class="button">Read More</button>
+                </a>
+              </div>
           </div>
-        </a>
         {% empty %}
           <article class="index-message">
             <div class="index-message-header">

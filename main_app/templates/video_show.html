@@ -5,7 +5,11 @@
 <div class="video-show">
           <div class="video-show-card">
               <img src="{{video.thumbnail}}" alt="{{video.title}}" />
-              <h1>{{video.title}}</h1>
+              <div class="video-info">
+                <h1 class="video-title">{{video.title}}</h1>
+                <p class="about">{{video.description}}</p>
+                <p class="date">{{video.date_taken}}</p>
+              </div>
           </div>
 
           <div class="comment-section">

@@ -311,6 +311,55 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
+/* Photo Show Page */
+
+.photo-show {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.photo-show .photo-show-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin-left: 10%;
+    background-color:#E6CCB2;
+    border-radius: 5px;
+    border: 5px solid saddlebrown;
+    height: 400px;
+}
+
+.photo-show .photo-show-card img{
+    max-height: 325px;
+    max-width: 325px;
+    margin-left: 5%;
+}
+
+.photo-show .photo-show-card .photo-body {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    margin-left: 5%;
+}
+
+.photo-show .photo-show-card .photo-body .date-posted {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin-top: 2%;
+}
+
+.photo-show .photo-show-card .photo-body .photo-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: rgb(117, 51, 16);
+    font-weight: bold;
+}
+
 /* Articles Index */
 
 .articles-index-gallery {
@@ -446,11 +495,10 @@ h1, h2, h3 {
 
 .mb-index-gallery {
     display: grid;
-    grid-template-columns: 400px 400px;
-    grid-template-rows: 300px 300px 300px;
-    gap: 10px;
+    grid-template-columns:500px 500px;
+    row-gap: 15px;
+    column-gap: 30px;
     margin-top: 2%;
-    border: 2px solid hotpink;
     justify-content: center;
  }
 
@@ -459,13 +507,247 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     padding-left: 5%;
-    border: 2px solid hotpink;
+    background-color:#E6CCB2;
+    width: 500px;
+    border-radius: 10px;
+    padding: 25px;
+    
  }
 
-/* .mb-index-gallery .mb-index-card .mb-title {
+ .mb-index-gallery .mb-index-card .mb-title{
+    font-size: 20px;
+    font-weight: bold;
+    color:#462915;
+    margin-bottom: 10px;
+ }
+
+ .mb-index-gallery .mb-index-card .button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+ }
+
+
+ .mb-index-gallery .mb-index-card button{
+    border: none;
+    background-color: white; 
+    color:rgb(117, 51, 16);
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px; 
+    height: 40px;
+    width: 140px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* Message Board Show Page */
+
+.mb-show {
+    margin-top: 2%;
+}
+
+.mb-show .mb-show-card {
+    background-color:rgb(69, 33, 6);
+    color: #EDE0D4;
+    height: 300px;
+    display: flex; 
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.mb-show .mb-show-card .title {
+    margin-left: 5%;
+    color:#B08968;
+    font-weight: bold; 
+}
+
+.mb-show .mb-show-card .paragraph {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.mb-show .mb-show-card .date {
+    margin-left: 5%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #9C6644;
+}
+
+/* Blinds Index */
+
+.blinds-index-gallery {
+    display: grid;
+    grid-template-columns:500px 500px;
+    row-gap: 15px;
+    column-gap: 30px;
+    margin-top: 2%;
+    justify-content: center;
+ }
+
+.blinds-index-gallery .blinds-index-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    background-color:#E6CCB2;
+    width: 500px;
+    border-radius: 10px;
+    padding: 25px;
+    
+ }
+
+ .blinds-index-gallery .blinds-index-card .button-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+ }
+
+
+ .blinds-index-gallery .blinds-index-card button{
+    border: none;
+    background-color: white; 
+    color:rgb(117, 51, 16);
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 5px; 
+    height: 40px;
+    width: 140px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.blinds-index-gallery .blinds-index-card .blinds-title{
+    font-size: 20px;
+    font-weight: bold;
+    color:#462915;
+    margin-bottom: 10px;
+ }
+
+ /* Blind Items Show Page */
+
+ .blind-show {
+    margin-top: 2%;
+}
+
+.blind-show .blind-show-card {
+    background-color:#452106;
+    color: #EDE0D4;
+    height: 300px;
+    display: flex; 
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.blind-show .blind-show-card .title {
+    margin-left: 5%;
+    color:#B08968;
+    font-weight: bold; 
+}
+
+.blind-show .blind-show-card .paragraph {
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.blind-show .blind-show-card .date {
+    margin-left: 5%;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #9C6644;
+}
+
+/* Video Index Page */
+
+.video-index-gallery {
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    column-gap: 25px;
+    row-gap: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.video-index-gallery .video-index-card {
+    background-color: #6A3011;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+}
+
+.video-index-gallery .video-index-card img{
+    width: 400px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.video-index-gallery .video-index-card .video-title {
+    width: 450px;
+    font-weight: bold;
     color:#E6CCB2;
+    margin-top: 10px;
+}
+
+/* Video Show Page */
+
+.video-show {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-show .video-show-card {
+    background-color: #E6CCB2;
+    border: 3px solid saddlebrown;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+    margin-bottom: 3%;
+}
+
+.video-show .video-show-card .video-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2%;
+}
+
+.video-show .video-show-card img{
+    width: auto;
+    height: 345px;
+    border-radius: 10px;
+}
+
+.video-show .video-show-card .video-title {
     font-size: 25px;
-    font-weight: 700;
-    margin-left:10%;
-    width: 150px;
- } */
+    font-weight: bold;
+    color: #452106;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+.video-show .video-show-card .about {
+    font-size: 15px;
+    margin-right: 5%;
+}
+
+.video-show .video-show-card .date {
+    font-size: 15px;
+    text-transform: uppercase;
+    color:#9C6644;
+    font-weight: light;
+    margin-top: 3%;
+}
