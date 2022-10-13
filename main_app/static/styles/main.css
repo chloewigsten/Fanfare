@@ -1,6 +1,6 @@
 /* Base Styling */
 body {
-    background-color: #EDE0D4;
+    background-color: #ccab80;
     color: #9C6644;
     min-height: 100vh;
 }
@@ -128,9 +128,10 @@ h1, h2, h3 {
 }
 
 .index-gallery .index-card:hover .hoverable {
-    visibility:visible;
-    margin-top: -10em;
-    margin-left: 4em;
+    visibility: visible;
+    height: 300;
+    /* margin-top: -10em;
+    margin-left: 4em; */
 }
 
 .index-gallery .index-card img{
@@ -206,40 +207,156 @@ h1, h2, h3 {
     height: 344px;
 }
 
-.celeb-show .grid-container .grid-item .grid-item-two {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-}
-
-.celeb-show .grid-container .grid-item .grid-item-three {
+.celeb-show .grid-container .grid-item-two {
     display: flex; 
     justify-content: center;
     align-items: center;
     height: 344px;
+    border:3px solid #462915;
+    border-radius: 5px;
 }
 
-.celeb-show .grid-container .grid-item .grid-item-four {
+.celeb-show .grid-container .grid-item-three {
     display: flex; 
     justify-content: center;
     align-items: center;
     height: 344px;
+    border:3px solid #462915;
+    border-radius: 5px;
 }
 
-.celeb-show .grid-container .grid-item .grid-item-five {
+.celeb-show .grid-container .grid-item-four {
     display: flex; 
     justify-content: center;
     align-items: center;
     height: 344px;
+    border:3px solid #462915;
+    border-radius: 5px;
 }
 
-.celeb-show .grid-container .grid-item .grid-item-six {
+.celeb-show .grid-container .grid-item-five {
     display: flex; 
     justify-content: center;
     align-items: center;
     height: 344px;
+    border:3px solid #462915;
+    border-radius: 5px;
 }
+
+.celeb-show .grid-container .grid-item-sixth {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 344px;
+    border:3px solid #462915;
+    border-radius: 5px;
+}
+
+.celeb-show .grid-container .grid-item-two a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 250px;
+    height: 75px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.celeb-show .grid-container .grid-item-two a:hover{
+    background-color: #452106;
+    color:#c38f5c;
+    border: 2px solid white;
+}
+
+.celeb-show .grid-container .grid-item-three a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 250px;
+    height: 75px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.celeb-show .grid-container .grid-item-three a:hover{
+    background-color: #452106;
+    color:#c38f5c;
+    border: 2px solid white;
+}
+
+.celeb-show .grid-container .grid-item-four a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 250px;
+    height: 75px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.celeb-show .grid-container .grid-item-four a:hover{
+    background-color: #452106;
+    color:#c38f5c;
+    border: 2px solid white;
+}
+
+.celeb-show .grid-container .grid-item-five a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 250px;
+    height: 75px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.celeb-show .grid-container .grid-item-five a:hover{
+    background-color: #452106;
+    color:#c38f5c;
+    border: 2px solid white;
+}
+
+.celeb-show .grid-container .grid-item-sixth a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    width: 350px;
+    height: 75px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+.celeb-show .grid-container .grid-item-sixth a:hover{
+    background-color: #452106;
+    color:#c38f5c;
+    border: 2px solid white;
+}
+
 
 .celeb-show .grid-container .grid-item .header-photo {
     position: relative; 
@@ -255,10 +372,12 @@ h1, h2, h3 {
     justify-content: flex-start;
     align-items: center;
     margin-top: 3%;
+    border-radius: 10px;
 }
 
 .celeb-show .celeb-photo .celeb-photo-img {
     border: 5px solid white;
+    border-radius: 10px;
 }
 
 .celeb-show .celeb-bio {
@@ -273,6 +392,7 @@ h1, h2, h3 {
     border-radius: 5px;
     padding: 20px;
     margin-left: 3%;
+    height: 275px;
 
 }
 
@@ -281,7 +401,61 @@ h1, h2, h3 {
     color: #EDE0D4;
     font-weight: bolder;
     columns: 500px 2;
+    margin-bottom: 5%;
 } 
+
+.celeb-show .grid-container .grid-item-one .celeb-bio .update-celeb a{
+    background-color: #c38f5c;
+    color:rgb(69, 33, 6);
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 250px;
+}
+
+.celeb-show .grid-container .grid-item-one .celeb-bio .update-celeb a:hover {
+    background-color: #452106;
+    color:#c38f5c;
+    margin-top: 1%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.celeb-show .grid-container .grid-item-one .celeb-bio .update-celeb {
+    margin-top: 5%;
+}
+
+.celeb-show .grid-container .grid-item-two img{
+    border-radius: 10px;
+    border: 2px solid saddlebrown;
+}
+
+.celeb-show .grid-container .grid-item-one:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+.celeb-show .grid-container .grid-item-two:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+.celeb-show .grid-container .grid-item-three:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+.celeb-show .grid-container .grid-item-four:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+.celeb-show .grid-container .grid-item-five:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+.celeb-show .grid-container .grid-item-sixth:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+
+
+
+
 
 /* Photo Index Page */
 
@@ -292,7 +466,7 @@ h1, h2, h3 {
     justify-content: center;
     background-color:rgb(106, 48, 16);
     border: 1px solid rgb(143, 61, 17);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 2%;
     margin-left: 1%;
     margin-right: 1%;
@@ -317,7 +491,14 @@ h1, h2, h3 {
     display: flex; 
     flex-direction: column;
     justify-content: center;
-    margin-top: 3%;
+    border-radius: 10px;
+    border: 5px solid white;
+    margin-top: 0.5%;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .photo-show .photo-show-card {
@@ -330,6 +511,8 @@ h1, h2, h3 {
     border-radius: 5px;
     border: 5px solid saddlebrown;
     height: 400px;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .photo-show .photo-show-card img{
