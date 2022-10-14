@@ -1,6 +1,7 @@
 /* Base Styling */
 body {
-    background-color: #ccab80;
+    background-image: url('https://imgur.com/5Kttuls.png');
+    background-size: cover;
     color: #9C6644;
     min-height: 100vh;
 }
@@ -111,6 +112,7 @@ h1, h2, h3 {
     overflow: hidden;
     height: 300px;
     object-fit: fill;
+    box-shadow: 0px 0px 5px 5px white;
 }
 
 .index-gallery .index-card:hover .celeb-image {
@@ -130,8 +132,6 @@ h1, h2, h3 {
 .index-gallery .index-card:hover .hoverable {
     visibility: visible;
     height: 300;
-    /* margin-top: -10em;
-    margin-left: 4em; */
 }
 
 .index-gallery .index-card img{
@@ -147,34 +147,52 @@ h1, h2, h3 {
 
 /* Search Bar Styling */
 
-.mb-5 {
-    margin-top: 20px;
+.top-of-index .mb-5 {
+    margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 10px;
 }
+
 .top-of-index {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     background-color:#e5be97;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-top: 3%;
+    background-color: #7F5539;
+    border: 5px solid white;
 }
 
-.mb-5 .button{
+.top-of-index .button{
     background-color: #7F5539;
     color: white;
-    border-radius: 4px;
+    border-radius: 10px;
     border: none;
+    width: 250px;
+    margin-left: 3%;
 }
 
-.mb-5 .control {
-    justify-content: center;
-    width: 350px; 
-    border-radius: 5px;
+.top-of-index .control{
+    background-color: #7F5539;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    margin-right: 10%;
 }
+
+
+.top-of-index .input{
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    width: 350px;
+}
+
 
 /* Celeb Show Page Styling */
 
@@ -393,6 +411,7 @@ h1, h2, h3 {
     padding: 20px;
     margin-left: 3%;
     height: 275px;
+    border: 5px solid white;
 
 }
 
@@ -468,8 +487,8 @@ h1, h2, h3 {
     border: 1px solid rgb(143, 61, 17);
     border-radius: 10px;
     margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .photo-index-gallery .photo-index-card {
@@ -537,10 +556,19 @@ h1, h2, h3 {
 }
 
 .photo-show .photo-show-card .photo-body .photo-title{
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: #5f2f0a;
+    font-weight: bold;
+    margin-right: 10%;
+}
+
+.photo-show .photo-show-card .photo-body .photo-description{
     font-size: 20px;
     margin-bottom: 10px;
-    color: rgb(117, 51, 16);
-    font-weight: bold;
+    color: #5f2f0a;
+    font-weight: light;
+    margin-right: 10%;
 }
 
 /* Articles Index */
@@ -560,6 +588,11 @@ h1, h2, h3 {
     background-color:#E6CCB2;
     border-radius: 10px;
 }
+
+.articles-index-gallery .articles-index-card:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
 
 .articles-index-gallery .articles-index-card .articles-photo {
     height: 270px;
@@ -656,21 +689,22 @@ h1, h2, h3 {
 
  .article-show .article-show-card .article-body .article-summary {
     font-size: 15px;
-    color: rgb(69, 33, 6);
+    color: rgb(118, 56, 8);
  }
 
 .article-show .article-show-card .article-body .read-more-button{
     font-size: 20px;
     width: 150px;
-    height: 40px;
+    height: 50px;
     background-color: rgb(69, 33, 6);
     color: white;
-    border: none;
+    border: 2px solid white;
     margin-top: 3%;
     margin-left: 30%;
     margin-right: 50%;
     margin-bottom: 3%;
     letter-spacing: 1px;
+    border-radius: 10px;
  }
 
 
@@ -678,35 +712,72 @@ h1, h2, h3 {
 
 .mb-index-gallery {
     display: grid;
-    grid-template-columns:500px 500px;
+    grid-template-columns:600px 600px;
     row-gap: 15px;
     column-gap: 30px;
     margin-top: 2%;
     justify-content: center;
+    padding-bottom: 50px;
  }
 
 .mb-index-gallery .mb-index-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5%;
     background-color:#E6CCB2;
-    width: 500px;
+    width: 600px;
+    height: 300px;
     border-radius: 10px;
     padding: 25px;
     
  }
 
+ .mb-index-gallery .mb-index-card:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+.mb-index-gallery .mb-index-card:hover button{
+    background-color:rgb(117, 51, 16);
+    color: white;
+    border: 2px solid white;
+}
+
+
  .mb-index-gallery .mb-index-card .mb-title{
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
     color:#462915;
     margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+ }
+
+ .mb-index-gallery .mb-index-card .date{
+    font-size: 15px;
+    font-weight: light;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-left: 5%;
+ }
+
+ .mb-index-gallery .mb-index-card .mb-body{
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 500px;
+    height: 70px;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
  }
 
  .mb-index-gallery .mb-index-card .button-section {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     margin-top: 15px;
  }
 
@@ -715,7 +786,7 @@ h1, h2, h3 {
     border: none;
     background-color: white; 
     color:rgb(117, 51, 16);
-    font-weight: 500;
+    font-weight: bold;
     font-size: 15px;
     border-radius: 5px; 
     height: 40px;
@@ -729,28 +800,34 @@ h1, h2, h3 {
 
 .mb-show {
     margin-top: 2%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .mb-show .mb-show-card {
     background-color:rgb(69, 33, 6);
-    color: #EDE0D4;
+    color: white;
     height: 300px;
     display: flex; 
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
+    border: 5px solid white;
+    width: 1000px;
 }
 
 .mb-show .mb-show-card .title {
     margin-left: 5%;
-    color:#B08968;
+    color:#cfac90;
     font-weight: bold; 
 }
 
 .mb-show .mb-show-card .paragraph {
     margin-left: 5%;
     margin-right: 10%;
+    
 }
 
 .mb-show .mb-show-card .date {
@@ -765,7 +842,7 @@ h1, h2, h3 {
 
 .blinds-index-gallery {
     display: grid;
-    grid-template-columns:500px 500px;
+    grid-template-columns:600px 600px;
     row-gap: 15px;
     column-gap: 30px;
     margin-top: 2%;
@@ -778,7 +855,7 @@ h1, h2, h3 {
     justify-content: center;
     padding-left: 5%;
     background-color:#E6CCB2;
-    width: 500px;
+    width: 600px;
     border-radius: 10px;
     padding: 25px;
     
@@ -795,14 +872,15 @@ h1, h2, h3 {
     border: none;
     background-color: white; 
     color:rgb(117, 51, 16);
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 17px;
     border-radius: 5px; 
     height: 40px;
     width: 140px;
     display: flex; 
     justify-content: center;
     align-items: center;
+
 }
 
 .blinds-index-gallery .blinds-index-card .blinds-title{
@@ -810,28 +888,65 @@ h1, h2, h3 {
     font-weight: bold;
     color:#462915;
     margin-bottom: 10px;
+    margin-left: 5%;
  }
+
+ .blinds-index-gallery .blinds-index-card .blinds-body{
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+    height: 70px;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+ }
+
+ .blinds-index-gallery .blinds-index-card .date {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-transform: uppercase;
+    font-weight: light;
+    margin-bottom: 10px;
+ }
+
+ .blinds-index-gallery .blinds-index-card:hover {
+    box-shadow: 0px 0px 5px 5px white;
+}
+
+.blinds-index-gallery .blinds-index-card:hover button{
+    background-color:rgb(117, 51, 16);
+    color: white;
+    border: 2px solid white;
+}
 
  /* Blind Items Show Page */
 
  .blind-show {
     margin-top: 2%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 
 .blind-show .blind-show-card {
     background-color:#452106;
-    color: #EDE0D4;
+    color: white;
     height: 300px;
+    width: 1000px;
     display: flex; 
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
+    border: 5px solid white;
 }
 
 .blind-show .blind-show-card .title {
     margin-left: 5%;
-    color:#B08968;
+    color:#cfac90;
     font-weight: bold; 
 }
 
