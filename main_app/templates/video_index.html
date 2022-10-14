@@ -7,7 +7,6 @@
         <a href="{% url 'video_show' video.pk %}">
           <div class="video-index-card">
               <img src="{{video.thumbnail}}" alt="{{video.title}}" />
-              <h2 class="video-title">{{video.title}}</h2>
           </div>
         </a>
         {% empty %}
