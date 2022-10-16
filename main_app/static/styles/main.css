@@ -21,9 +21,7 @@ h1, h2, h3 {
     margin: 0 auto;
     background: #9C6644;
     padding: 50px 0;
-    box-shadow: 0px 5px 0px #dedede;
     font-size: 25px;
-    border-radius: 10px;
   }
   nav ul {
     list-style: none;
@@ -136,6 +134,7 @@ h1, h2, h3 {
 
 .index-gallery .index-card img{
     width: 325px;
+    border-radius: 5px;
 }
 
 .index-gallery .index-card .index-card-title {
@@ -164,25 +163,26 @@ h1, h2, h3 {
     border-radius: 10px;
     margin-top: 3%;
     background-color: #7F5539;
-    border: 5px solid white;
+    border: 3px solid white;
 }
 
 .top-of-index .button{
-    background-color: #7F5539;
+    background-color: #e5be97;
     color: white;
     border-radius: 10px;
-    border: none;
+    border: 3px solid white;
     width: 250px;
     margin-left: 3%;
+    color:rgb(69, 33, 6); 
+    font-weight: light; 
+    font-size: 15px;
+    text-transform: uppercase;
+
 }
 
-.top-of-index .control{
-    background-color: #7F5539;
-    color: white;
+.top-of-index .field .control{
+    width: 500px;
     border-radius: 10px;
-    border: none;
-    width: 200px;
-    margin-right: 10%;
 }
 
 
@@ -190,7 +190,7 @@ h1, h2, h3 {
     background-color: white;
     border-radius: 10px;
     border: none;
-    width: 350px;
+    width: 500px;
 }
 
 
