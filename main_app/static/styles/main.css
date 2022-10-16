@@ -490,7 +490,7 @@ h1, h2, h3 {
 
 .celeb-show .celeb-bio {
     display: flex; 
-    justify-content: flex-end;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     width: 55%;
