@@ -143,4 +143,5 @@ class MessageBoardShow(DetailView):
         return context
 
 
-
+class NotFound(TemplateView):
+    template_name='not_found.html'

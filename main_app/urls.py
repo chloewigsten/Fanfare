@@ -17,4 +17,5 @@ urlpatterns = [
     path('articles/<int:pk>', views.ArticleShow.as_view(), name='article_show'),
     path('celebs/<int:pk>/message-boards', views.MessageBoardsIndex.as_view(), name='message_board_index'), 
     path('message-boards/<int:pk>', views.MessageBoardShow.as_view(), name='message_board_show'),
+    path('*', views.NotFound.as_view(), name='not_found'),
 ]
