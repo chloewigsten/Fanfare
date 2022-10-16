@@ -6,6 +6,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic import DetailView
 from .models import Celeb, Photo, BlindItem, Article, Video, MessageBoard
+from django.shortcuts import render, redirect
 
 # Home View
 class Home(TemplateView):
@@ -142,5 +143,11 @@ class MessageBoardShow(DetailView):
         context = super(MessageBoardShow, self).get_context_data(**kwargs)
         return context
 
+class PageNotFound(TemplateView):
+    def error_404_view(request, exception):
+        return render(request, '404.html')
 
 
+def error_404(request, exception):
+   context = {}
+   return render(request,'404.html', context)
