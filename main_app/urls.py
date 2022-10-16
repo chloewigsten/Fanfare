@@ -17,5 +17,8 @@ urlpatterns = [
     path('articles/<int:pk>', views.ArticleShow.as_view(), name='article_show'),
     path('celebs/<int:pk>/message-boards', views.MessageBoardsIndex.as_view(), name='message_board_index'), 
     path('message-boards/<int:pk>', views.MessageBoardShow.as_view(), name='message_board_show'),
-    path('*', views.NotFound.as_view(), name='not_found'),
+    path(handler404 = 'mysite.views.my_custom_page_not_found_view'),
+    path(handler500 = 'mysite.views.my_custom_error_view'),
+    path(handler403 = 'mysite.views.my_custom_permission_denied_view'),
+    path(handler400 = 'mysite.views.my_custom_bad_request_view'),
 ]
