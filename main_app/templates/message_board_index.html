@@ -5,8 +5,9 @@
 <div class="mb-index-gallery">
   {% for messageboard in messageboards %}
           <div class="mb-index-card">
+            <p class="date">{{messageboard.date_posted}}</p>
               <h1 class="mb-title">{{messageboard.title}}</h1>
-              <p class="mb-body">{{messageboard.body}}</p>
+              <p class="mb-body" maxlength="5">{{messageboard.body}}</p>
               <div class="button-section">
                 <a href="{% url 'message_board_show' messageboard.pk %}">
                   <button class="mb-button">Read More</button>

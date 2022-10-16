@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Update {{celeb.name}}</h1>
+<div class="update-celeb-page">
+    <h1>Update {{celeb.name}}:</h1>
 
-<form action="" method="post">
-    {% csrf_token %} {{form.as_p}} <input type="submit" value="Update Celeb" />
-</form>
-
+    <form action="" method="post">
+        {% csrf_token %} {{form.as_p}} <input type="submit" value="Update Celeb" height="50px" />
+    </form>
+</div>
 {% endblock %}

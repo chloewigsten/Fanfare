@@ -5,8 +5,9 @@
 <div class="blinds-index-gallery">
   {% for blinditem in blinditems %}
           <div class="blinds-index-card">
+              <p class="date">{{blinditem.date_posted}}</p>
               <h1 class="blinds-title">{{blinditem.title}}</h1>
-              <p>{{blinditem.body}}</p>
+              <p class="blinds-body">{{blinditem.body}}</p>
               <div class="button-section">
                 <a href="{% url 'blind_item_show' blinditem.pk %}">
                   <button class="button">Read More</button>

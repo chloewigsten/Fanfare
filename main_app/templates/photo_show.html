@@ -7,17 +7,18 @@
               <img src="{{photo.photo}}" alt="{{photo.title}}" />
               <div class="photo-body">
                 <h1 class="photo-title">{{photo.title}}</h1>
-                <p>{{photo.description}}</p>
+                <p class="photo-description">{{photo.description}}</p>
                 <p class="date-posted">{{photo.date_taken}}</p>
               </div>
           </div>
 
           <div class="comment-section">
+            <h1 class="header">Comments:</h1>
             {% for comment in photo.comments.all %}
             <div class="comment">
-                <h4>{{comment.username}}</h4>
-                <p>{{comment.body}}</p>
-                <p>{{comment.date_posted}}</p>
+                <p class="date">{{comment.date_posted}}</p>
+                <h4 class="username">{{comment.username}}</h4>
+                <p class="body">{{comment.body}}</p>
             </div>
             {% empty %}
             <article class="message">
