@@ -17,7 +17,10 @@
                     <h1 class="show-page-title">{{celeb.name}}</h1>
                     <p>{{celeb.bio}}</p>
                     <div class="update-celeb">
-                        <a href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update Celeb</a>
+                        <a class='update' href="{% url 'update_celeb' celeb.pk %}" class="button-is-danger">Update</a>
+                    </div>
+                    <div class="update-celeb">
+                        <a class='update' href="{% url 'celeb_delete' celeb.pk %}" class="button-is-danger">Delete</a>
                     </div>
                 </div>
             </div>

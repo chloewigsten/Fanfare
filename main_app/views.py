@@ -1,9 +1,10 @@
+from ast import Delete
 from email.message import Message
 from re import L
 from django.shortcuts import render 
 from django.views import View 
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from .models import Celeb, Photo, BlindItem, Article, Video, MessageBoard
 from django.shortcuts import render, redirect
@@ -44,6 +45,10 @@ class CelebUpdate(UpdateView):
     template_name = 'update_celeb.html'
     success_url = "/celebs/"
 
+class CelebDelete(DeleteView):
+    model = Celeb
+    template_name='celeb_delete_confirmation.html'
+    success_url = '/celebs/'
 
 # Photo Model
 

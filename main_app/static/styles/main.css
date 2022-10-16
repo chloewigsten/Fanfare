@@ -516,13 +516,17 @@ h1, h2, h3 {
 .celeb-show .grid-container .grid-item-one .celeb-bio .update-celeb{
     background-color: #c38f5c;
     color:#452106;
-    margin-top: 5%;
+    margin-top: 3%;
+    margin-bottom: 1%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     border: 2px solid white;
     width: 150px;
+    height: 30px;
     display: flex;
     justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .celeb-show .grid-container .grid-item-one .celeb-bio .update-celeb a{
@@ -538,9 +542,9 @@ h1, h2, h3 {
 .celeb-show .grid-container .grid-item-one:hover .celeb-bio .update-celeb{
     background-color: #452106;
     color:#c38f5c;
-    margin-top: 5%;
+    margin-top: 3%;
     border-radius: 5px;
-    padding: 5px;
+    padding: 3px;
     border: 2px solid white;
     width: 150px;
 }
@@ -1501,4 +1505,42 @@ h1, h2, h3 {
 .not-found h1{
     font-size: 300px;
 }
+
+/* Delete View */
+.celeb-delete-page .delete-celeb{
+    font-size: 30px;
+    color:rgb(216, 181, 154);
+    background-color:rgb(69, 33, 6);
+    border: 5px solid #e5be97;
+    border-radius: 10px;
+    width: 700px;
+    margin-top: 3%;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    
+ }
+
+ .celeb-delete-page form{
+    display: flex;
+    justify-content: center;
+    
+ }
+
+ .celeb-delete-page .button{
+    display: flex;
+    justify-content: center;
+    background-color: #e5be97;
+    color:rgb(69, 33, 6);
+    border: 3px solid white;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
 

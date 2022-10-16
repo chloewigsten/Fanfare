@@ -8,6 +8,7 @@ urlpatterns = [
     path('celebs/new', views.CreateCelebs.as_view(), name='create_celeb'),
     path('celebs/<int:pk>/', views.CelebShow.as_view(), name='celeb_show'), 
     path('celebs/<int:pk>/update', views.CelebUpdate.as_view(), name='update_celeb'),
+    path('celebs/<int:pk>/delete', views.CelebDelete.as_view(), name="celeb_delete"),
     path('celebs/<int:pk>/photos/', views.PhotoIndex.as_view(), name='photo_index'),
     path('photos/<int:pk>', views.PhotoShow.as_view(), name='photo_show'),  
     path('celebs/<int:pk>', views.VideoIndex.as_view(), name='video_index'),

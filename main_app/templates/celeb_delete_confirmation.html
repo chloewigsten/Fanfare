@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div class="celeb-delete-page">
+    <h1 class="delete-celeb">Delete {{celeb.name}}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="buttons">
+            <input class="button" type="submit" value="Yes" />
+            <a class="button" href="{% url 'celeb_show' celeb.pk %}">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
