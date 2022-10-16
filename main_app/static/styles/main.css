@@ -142,6 +142,8 @@ h1, h2, h3 {
     grid-template-rows: 300px 300px 300px 300px;
     gap: 10px;
     margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 .index-gallery .index-card {
