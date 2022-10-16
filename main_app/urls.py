@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls import handler404, handler500, handler403, handler400
 from . import views
 
 urlpatterns = [
@@ -16,6 +17,9 @@ urlpatterns = [
     path('celebs/<int:pk>/articles', views.ArticlesIndex.as_view(), name='article_index'), 
     path('articles/<int:pk>', views.ArticleShow.as_view(), name='article_show'),
     path('celebs/<int:pk>/message-boards', views.MessageBoardsIndex.as_view(), name='message_board_index'), 
-    path('message-boards/<int:pk>', views.MessageBoardShow.as_view(), name='message_board_show'),
-    path(handler404 = 'mysite.views.my_custom_page_not_found_view'),
+    path('message-boards/<int:pk>', views.MessageBoardShow.as_view(), name='message_board_show'), 
 ]
+
+# handler404 = "helpers.views.handle_not_found"
+
+handler404 = views.error_404
