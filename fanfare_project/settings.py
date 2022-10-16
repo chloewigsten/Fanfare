@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-65@yxf-i8_0905j5a4__kopn2h)24!$v!n4+ly--@(*1+%!o-p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'https://fanfare-django-python-project.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', 'fanfare-django-python-project.herokuapp.com']
 
 
 # Application definition
